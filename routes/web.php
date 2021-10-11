@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 
 //login
-Route::get('/login','App\Http\Controllers\LoginController@index')->name('login.index');
+Route::get('/','App\Http\Controllers\LoginController@index')->name('login.index');
 Route::post('/login','App\Http\Controllers\LoginController@login')->name('login');
 Route::get('/logout','App\Http\Controllers\LoginController@logout')->name('logout');
 

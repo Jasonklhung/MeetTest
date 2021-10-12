@@ -14,6 +14,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
+
+//user
+Route::get('/user','App\Http\Controllers\Api\UserController@userList');
+
+//bug
+Route::get('/bug','App\Http\Controllers\Api\BugController@bugList');
+Route::post('/bug/create','App\Http\Controllers\Api\BugController@store');
+
+//ticket
+Route::get('/ticket','App\Http\Controllers\Api\TicketController@ticketList');

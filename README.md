@@ -1,64 +1,44 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+## 前製作業
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+.env檔案裡面有DB連線資訊&DB名稱 請先建立好
 
-## About Laravel
+建立好DB後 輸入指令 
+php artisan migrate (自動建立table)
+php artisan db:seed (塞資料給需要的tabel EX: user資料&user權限)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+基本使用者帳密
+帳號 		   密碼
+QA	 		   QA
+RD   		   RD
+PM   		   PM
+Administrator  Administrator
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+網址 localhost/Meet/public/  (登入頁)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Task 1
+Phase I use case:
 
-## Learning Laravel
+當使用者QA使用ticket tracking system系統,發現了程式上的bug,QA可以新增一個新的bug,並且寫下bug的摘要&描述,QA也可以編輯和刪除bug
+只有RD可以解決bug,當RD修復好bug後,便可以在系統上將bug的狀態改成已解決
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Phase II use case:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+ticket有嚴重性跟優先級,讓使用者可以知道需要優先處理哪張ticket
+只有PM可以新增類型為功能請求(Feature Request)的工單,RD新增完PM要求的功能後,可以上系統將其狀態改成已解決,並且只有RD有此權限
+只有QA可以新增類型為測試工單(Test Case)的工單,並且只有QA自己可以解決此工單
+最高權限管理者Administrator,擁有全部bug & ticket 的處理權限,並且可以新增其他使用者QA、RD、PM
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## Task 2
 
-### Premium Partners
+使用PHP Laravel 完成,透過前置作業即可開始使用
+前端使用html+css+bootstrap
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[CMS Max](https://www.cmsmax.com/)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
+### Task 3
 
-## Contributing
+- **[Class Diagram](https://docs.google.com/presentation/d/112LQuR2dJw88WQtOD_J_ycw_9kbNzakzxHGcgbJdQrs/edit?usp=sharing)**
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Task4
 
-## Code of Conduct
+- **["API規格書"](https://docs.google.com/document/d/15x5SqQEdEoPtRSHovKi2f57CByWLla-RqSt7oqvclxg/edit?usp=sharing)**
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).

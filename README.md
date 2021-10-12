@@ -3,17 +3,17 @@
 .env檔案裡面有DB連線資訊&DB名稱 請先建立好
 
 建立好DB後 輸入指令 
-php artisan migrate (自動建立table)
-php artisan db:seed (塞資料給需要的tabel EX: user資料&user權限)
+<p>php artisan migrate (自動建立table)</p>
+<p>php artisan db:seed (塞資料給需要的tabel EX: user資料&user權限)</p>
 
-基本使用者帳密
-帳號 		   密碼
-QA	 		   QA
-RD   		   RD
-PM   		   PM
-Administrator  Administrator
+<p>基本使用者帳密</p>
+<p>帳號 		   	   密碼</p>
+<p>QA	 		   QA</p>
+<p>RD   		   RD</p>
+<p>PM   		   PM</p>
+<p>Administrator  Administrator</p>
 
-網址 localhost/Meet/public/  (登入頁)
+</p>網址 localhost/Meet/public/  (登入頁)</p>
 
 ## Task 1
 Phase I use case:

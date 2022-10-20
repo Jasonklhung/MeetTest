@@ -1,5 +1,7 @@
 ## 前製作業
 
+composer install
+
 .env檔案裡面有DB連線資訊&DB名稱 請先建立好
 
 建立好DB後 輸入指令 
